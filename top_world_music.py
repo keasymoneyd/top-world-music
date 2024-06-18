@@ -28,7 +28,8 @@ def get_lyrics(track_name, artist_name):
     """使用 Musixmatch API 抓取歌詞。"""
     api_url = "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get"
     params = {
-        "apikey": MUSIXMATCH_API_KEY,
+        #"apikey": MUSIXMATCH_API_KEY,
+        "apikey":os.environ['api_key'],
         "q_track": track_name,
         "q_artist": artist_name
     }
